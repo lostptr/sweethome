@@ -70,26 +70,27 @@ a {
   height: 50vh;
   width: 50vh;
   object-fit: cover;
+  border-radius: 8px;
   box-shadow: 0px 1px 11px 1px #00000099;
 }
 
 #left-side {
   padding: 32px 0px;
   animation-name: fade-in;
-  animation-duration: 1.5s;
+  animation-duration: 1.0s;
 }
 
 #greeting-header {
   animation-name: fade-in;
   animation-duration: 1.0s;
-  animation-delay: 0.2s;
+  animation-delay: 0.1s;
   animation-fill-mode: both;
 }
 
 #date-header {
   animation-name: fade-in;
   animation-duration: 1.0s;
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
   animation-fill-mode: both;
 }
 
@@ -104,7 +105,7 @@ a {
   row-gap: 32px;
   animation-name: fade-in;
   animation-duration: 1.0s;
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
   animation-fill-mode: both;
 }
 
