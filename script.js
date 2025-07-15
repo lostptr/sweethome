@@ -19,7 +19,14 @@ function getPeriodOfTheDay() {
   }
 }
 
-const theme = pickRandom(profile.themes);
+const period = getPeriodOfTheDay();
+let themes = profile.themes;
+if (period === "morning") {
+  themes = themes.filter(t => t.type === "light");
+} else if (period === "evening" || period === "night") {
+  themes = themes.filter(t => t.type === "dark");
+}
+const theme = pickRandom(themes);
 
 // Set image
 const imgSlot = document.getElementById("img-slot");
@@ -39,6 +46,6 @@ const dateHeader = document.getElementById("date-header");
 dateHeader.innerHTML = dateString;
 
 // Set gretting
-var greetting = profile.grettings[getPeriodOfTheDay()];
+var greetting = profile.grettings[period];
 const greetingHeader = document.getElementById("greeting-header");
 greetingHeader.innerHTML = greetting;
